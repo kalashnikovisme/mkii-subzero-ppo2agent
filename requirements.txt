@@ -1,3 +1,5 @@
 stable_baselines==2.10.0
 gym==0.15.7
 gym-retro==0.8.0
+tensorflow
+cloudpickle~=1.2.0

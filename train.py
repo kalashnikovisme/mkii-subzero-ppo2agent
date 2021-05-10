@@ -7,7 +7,7 @@ import gym
 from stable_baselines.common.callbacks import CheckpointCallback
 from utils import *
 
-gamename = "MortalKombatII-Genesis"
+gamename = "MortalKombat3-Genesis"
 
 if __name__ == "__main__":
     n_cpu = 16
