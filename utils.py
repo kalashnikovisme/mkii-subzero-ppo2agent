@@ -60,7 +60,7 @@ class SubzeroDiscretizer(Discretizer):
         ['LEFT', 'C', 'Z'], ['RIGHT', 'C', 'Z']
         ])
 
-gamename = "MortalKombatII-Genesis"
+gamename = "MortalKombat3-Genesis"
 
 # start from the 1st fight on very easy playing as Sub-Zero
 def make_env():

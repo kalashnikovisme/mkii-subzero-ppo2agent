@@ -1,5 +1,5 @@
 [tool.poetry]
-name = "poetry-demo"
+name = "mk3-train"
 version = "0.1.0"
 description = ""
 authors = ["Pavel Kalashnikov"]
@@ -9,5 +9,5 @@ python = ">= 3.6.0"
 stable_baselines = "2.10.0"
 gym = "0.15.7"
 gym-retro = "0.8.0"
-tensorflow = "1.15.0"
+tensorflow = "1.15.5"
 cloudpickle = "1.2.0"
