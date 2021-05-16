@@ -26,11 +26,17 @@ cp gym-retro-files/scenario.json ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO
 cp gym-retro-files/metadata.json ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO3-py3.7/lib/python3.7/site-packages/retro/data/stable/MortalKombat3-Genesis/
 ```
 
-# RUN
+## RUN
 
 ```
 poetry run python train.py
 ```
+
+## How create new state for the game
+
+Here the proper instruction
+
+[https://github.com/openai/retro/issues/33#issuecomment-387205034](https://github.com/openai/retro/issues/33#issuecomment-387205034)
 
 
 Now you can play around with the train.py and play.py scripts
