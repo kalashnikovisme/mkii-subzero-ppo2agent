@@ -16,15 +16,22 @@ If it's does not work, use Option 2
 ### Option 2
 
 1. Install python 3.7.10 via `pyenv install 3.7.10`
-2. Install pip packages and any dependencies `poetry install`
-3. Find a Mortal Kombat II Sega Genesis ROM and install it with ```poetry run python -m retro.import ./```
-4. Copy the save SubZeroState.state, scenario.json (reward function definition), metadata.json in gym-retro-files to retro package installation directory
+3. Install pip packages and any dependencies `poetry install`
+4. Find a Mortal Kombat II Sega Genesis ROM and install it with ```poetry run python -m retro.import ./```
+5. Copy the save SubZeroState.state, scenario.json (reward function definition), metadata.json in gym-retro-files to retro package installation directory
 
 ```
 cp gym-retro-files/SubZeroState.state ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO3-py3.7/lib/python3.7/site-packages/retro/data/stable/MortalKombat3-Genesis/
 cp gym-retro-files/scenario.json ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO3-py3.7/lib/python3.7/site-packages/retro/data/stable/MortalKombat3-Genesis/
 cp gym-retro-files/metadata.json ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO3-py3.7/lib/python3.7/site-packages/retro/data/stable/MortalKombat3-Genesis/
 ```
+
+# RUN
+
+```
+poetry run python train.py
+```
+
 
 Now you can play around with the train.py and play.py scripts
 
