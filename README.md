@@ -8,7 +8,7 @@ The second-last model I demo'ed in the video, it's the same one but before I tra
 ## Setup:
 1. Install python 3.7.10 via `pyenv install 3.7.10`
 2. Install pip packages and any dependencies `poetry install`
-3. Find a Mortal Kombat II Sega Genesis ROM and install it with ```poetry run python -m retro.import /path/to/your/ROMs/directory/```
+3. Find a Mortal Kombat II Sega Genesis ROM and install it with ```poetry run python -m retro.import ./```
 4. Copy the save states and the scenario.json (reward function definition) in gym-retro-files to /your-pip-install-folder/retro/data/stable/MortalKombatII-Genesis
 
 Now you can play around with the train.py and play.py scripts
