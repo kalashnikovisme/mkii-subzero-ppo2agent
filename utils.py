@@ -42,7 +42,7 @@ class Discretizer(gym.ActionWrapper):
 # Avoid Throw :  Diagonally down away from opponent + BLOCK
 # Close Move  :  Any attack button(Close to opponent)
 
-class SubzeroDiscretizer(Discretizer):
+class ShangTsungDiscretizer(Discretizer):
     # Freeze: D, F, LP
     # Ground Freeze: D, B, LK
     # Slide: B + LK + HK 
@@ -55,9 +55,8 @@ class SubzeroDiscretizer(Discretizer):
         ['LEFT', 'A'], ['RIGHT', 'A'], ['LEFT', 'UP', 'A'], ['RIGHT', 'UP', 'A'], ['LEFT', 'DOWN', 'A'], ['RIGHT', 'DOWN', 'A'],
         ['DOWN', 'X'],
         ['DOWN', 'A'], 
-        ['DOWN', 'C'], ['LEFT', 'DOWN', 'C'], ['RIGHT', 'DOWN', 'C'],
-        ['DOWN', 'Y'], ['DOWN', 'LEFT', 'Y'], ['DOWN', 'RIGHT', 'Y'],
-        ['LEFT', 'C', 'Z'], ['RIGHT', 'C', 'Z']
+        ['DOWN', 'C'], ['LEFT', 'LEFT', 'A'], ['LEFT', 'LEFT', 'RIGHT', 'A'],
+        ['DOWN', 'Y'], ['LEFT', 'LEFT', 'RIGHT', 'RIGHT', 'A'], ['RIGHT', 'LEFT', 'LEFT', 'DOWN', 'C']
         ])
 
 gamename = "MortalKombat3-Genesis"
@@ -65,10 +64,10 @@ gamename = "MortalKombat3-Genesis"
 # start from the 1st fight on very easy playing as Sub-Zero
 def make_env():
     env = retro.make(gamename, state='Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
-    env = SubzeroDiscretizer(env)
+    env = ShangTsungDiscretizer(env)
     return env
 
 def make_env_record():
     env = retro.make(gamename, state='Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
-    env = SubzeroDiscretizer(env)
+    env = ShangTsungDiscretizer(env)
     return env

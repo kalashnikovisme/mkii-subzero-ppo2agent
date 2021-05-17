@@ -1,7 +1,7 @@
 {
-  "default_state": "SubZeroState.state",
+  "default_state": "Level1.ShangTsungVsLiuKang.state",
   "states": {
-    "SubZeroState.state": {
+    "Level1.ShangTsungVsLiuKang.state": {
       "runs": [
         {
           "name": "ppo-10M",
