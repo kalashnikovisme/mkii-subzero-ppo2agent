@@ -9,7 +9,17 @@ The second-last model I demo'ed in the video, it's the same one but before I tra
 
 ### Option 1:
 
-Just run `make install`
+Install pyenv
+
+then
+
+```
+pyenv install -v 3.7.10
+```
+
+install poetry
+
+then run `make install`
 
 If it's does not work, use Option 2
 
