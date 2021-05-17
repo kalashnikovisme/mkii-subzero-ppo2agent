@@ -1,7 +1,7 @@
 {
   "done": {
     "variables": {
-      "enemy_rounds_won": {
+      "enemy_matches_won": {
         "op": "equal",
         "reference": 2
       }
@@ -12,14 +12,8 @@
       "enemy_health": {
         "penalty": -1.0
       },
-      "health": {
-        "penalty": 1.0
-      },
-      "enemy_rounds_won": {
-        "reward": -5000.0
-      },
-      "rounds_won": {
-        "reward": 5000.0
+      "wins": {
+        "reward": 10.0
       }
     }
   }

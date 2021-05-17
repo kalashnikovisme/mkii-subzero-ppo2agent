@@ -64,11 +64,11 @@ gamename = "MortalKombat3-Genesis"
 
 # start from the 1st fight on very easy playing as Sub-Zero
 def make_env():
-    env = retro.make(gamename, state='SubZeroState.state', obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state='Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
     env = SubzeroDiscretizer(env)
     return env
 
 def make_env_record():
-    env = retro.make(gamename, state='SubZeroState.state', obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state='Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
     env = SubzeroDiscretizer(env)
     return env
