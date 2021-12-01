@@ -8,6 +8,9 @@ install:
 train:
 	pyenv exec python train.py
 
+play:
+	pyenv exec python play.py
+
 docker_build:
 	docker build . -t mk3-train
 
