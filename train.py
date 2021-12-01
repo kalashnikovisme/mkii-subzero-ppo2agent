@@ -20,8 +20,8 @@ if __name__ == "__main__":
     # model = PPO2.load("training_checkpoints/your_model.zip", tensorboard_log="./tboard_log")
     # model.set_env(env)
 
-    checkpoint_callback = CheckpointCallback(save_freq=1000, save_path='./training_checkpoints',
+    checkpoint_callback = CheckpointCallback(save_freq=100, save_path='./training_checkpoints',
                                             name_prefix='subzero-ppo2')
-    model.learn(total_timesteps=1500, callback=checkpoint_callback)
+    model.learn(total_timesteps=15000, callback=checkpoint_callback)
     model.save('subzero-ppo2')
     env.close()
