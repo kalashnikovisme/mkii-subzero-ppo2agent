@@ -52,3 +52,5 @@ Here the proper instruction
 Now you can play around with the train.py and play.py scripts
 
 Refer to the Gym Retro docs for more info: https://retro.readthedocs.io/en/latest/index.html
+
+Nice video will help with RetroArch https://www.youtube.com/watch?v=FVbkQWmU2ps
