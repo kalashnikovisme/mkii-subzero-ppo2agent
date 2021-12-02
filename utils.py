@@ -43,32 +43,47 @@ class Discretizer(gym.ActionWrapper):
 # Close Move  :  Any attack button(Close to opponent)
 
 class ShangTsungDiscretizer(Discretizer):
-    # Freeze: D, F, LP
-    # Ground Freeze: D, B, LK
-    # Slide: B + LK + HK 
     def __init__(self, env):
-        super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[[], ['X'], ['A'], ['Z'], ['C'], ['Y'], ['START'], ['UP'], ['DOWN'], ['LEFT'], ['RIGHT'], 
-        ['LEFT', 'UP'], ['LEFT', 'DOWN'], ['RIGHT', 'UP'], ['RIGHT', 'DOWN'],
-        ['UP', 'Z'], ['LEFT', 'UP', 'Z'], ['RIGHT', 'UP', 'Z'],
-        ['UP', 'X'], ['LEFT', 'UP', 'X'], ['RIGHT', 'UP', 'X'],
-        ['LEFT', 'X'], ['RIGHT', 'X'], ['LEFT', 'DOWN', 'X'], ['RIGHT', 'DOWN', 'X'],
-        ['LEFT', 'A'], ['RIGHT', 'A'], ['LEFT', 'UP', 'A'], ['RIGHT', 'UP', 'A'], ['LEFT', 'DOWN', 'A'], ['RIGHT', 'DOWN', 'A'],
-        ['DOWN', 'X'],
-        ['DOWN', 'A'], 
-        ['DOWN', 'C'], ['LEFT', 'LEFT', 'A'], ['LEFT', 'LEFT', 'RIGHT', 'A'],
-        ['DOWN', 'Y'], ['LEFT', 'LEFT', 'RIGHT', 'RIGHT', 'A'], ['RIGHT', 'LEFT', 'LEFT', 'DOWN', 'C']
+        HP = 'X' 
+        LP = 'A'
+        HK = 'Z'
+        LK = 'C'
+        BL = 'Y'
+        UP = 'UP'
+        DOWN = 'DOWN'
+        LEFT = 'LEFT'
+        RIGHT = 'RIGHT'
+
+        super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[[],
+        [HP], [LP], [HK], [LK], [BL], ['START'], [UP], [DOWN], [LEFT], [RIGHT], # single moves
+        [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
+        [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
+        [LEFT, HP], [RIGHT, HP], [LEFT, DOWN, HP], [RIGHT, DOWN, HP],
+        [LEFT, LP], [RIGHT, LP], [LEFT, UP, LP], [RIGHT, UP, LP], [LEFT, DOWN, LP], [RIGHT, DOWN, LP],
+        [DOWN, HP],
+        [DOWN, LP], 
+        [DOWN, LK],
+        [DOWN, BL],
+        [LEFT, LEFT, HP], # Fire Skull
+        [LEFT, LEFT, RIGHT, HP], # Double Fire Skull
+        [LEFT, LEFT, RIGHT, RIGHT, HP], # Triple Fire Skull
+        [RIGHT, LEFT, LEFT, LK], # Volcanic Eruption
+        [HP, HP, LP], [LK, HP, HP, LP], # kombos
+        [HP, HP, HP, HP] # unfair combo
         ])
 
 gamename = "MortalKombat3-Genesis"
+#state = '/home/pavel/projects/mkii-subzero-ppo2agent/Level1.ShangTsungVsLiuKang.state'
+state = 'Level1.ShangTsungVsLiuKang.state'
+
 
 # start from the 1st fight on very easy playing as Sub-Zero
 def make_env():
-    env = retro.make(gamename, state='./Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state=state, obs_type=retro.Observations.IMAGE)
     env = ShangTsungDiscretizer(env)
-    print("Loading is done")
     return env
 
 def make_env_record():
-    env = retro.make(gamename, state='./Level1.ShangTsungVsLiuKang.state', obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state=state, obs_type=retro.Observations.IMAGE)
     env = ShangTsungDiscretizer(env)
     return env
