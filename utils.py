@@ -60,16 +60,15 @@ class ShangTsungDiscretizer(Discretizer):
         ])
 
 gamename = "MortalKombat3-Genesis"
-state = '/home/pavel/projects/mkii-subzero-ppo2agent/kabal2.state'
+#state = 'kabal2.state'
 #state = 'Level1.ShangTsungVsLiuKang.state'
 
-
 def make_env():
-    env = retro.make(gamename, state=state, obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state=retro.State.DEFAULT)
     env = ShangTsungDiscretizer(env)
     return env
 
 def make_env_record():
-    env = retro.make(gamename, state=state, obs_type=retro.Observations.IMAGE)
+    env = retro.make(gamename, state=retro.State.DEFAULT)
     env = ShangTsungDiscretizer(env)
     return env

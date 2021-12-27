@@ -1,7 +1,7 @@
 {
-  "default_state": "kabal2.state",
+  "default_state": "Level1.ShangTsungVsLiuKang.state",
   "states": {
-    "kabal2.state": {
+    "Level1.ShangTsungVsLiuKang.state": {
       "runs": [
         {
           "name": "ppo-10M",
