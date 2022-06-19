@@ -39,7 +39,13 @@ cp gym-retro-files/metadata.json ~/.cache/pypoetry/virtualenvs/mk3-train-GItkoUO
 ## RUN
 
 ```
-poetry run python train.py
+make train
+```
+
+## Play
+
+```
+make play
 ```
 
 ## How create new state for the game
