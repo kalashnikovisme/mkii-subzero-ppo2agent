@@ -41,7 +41,7 @@ class ShangTsungDiscretizer(Discretizer):
 
         super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[
             [],
-            [BL, BL, BL]
+            [BL, BL]
         # [HP], [LP],
         # [HK], [LK], [BL], [LEFT], [RIGHT], # single moves
         # [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
