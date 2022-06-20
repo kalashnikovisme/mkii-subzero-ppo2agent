@@ -22,6 +22,6 @@ if __name__ == "__main__":
 
     checkpoint_callback = CheckpointCallback(save_freq=1000, save_path='./training_checkpoints',
                                             name_prefix='mk3-ppo2')
-    model.learn(total_timesteps=2000, callback=checkpoint_callback)
+    model.learn(total_timesteps=20000, callback=checkpoint_callback)
     model.save('mk3-ppo2')
     env.close()
