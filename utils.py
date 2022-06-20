@@ -33,7 +33,7 @@ class ShangTsungDiscretizer(Discretizer):
         LP = 'A'
         HK = 'Z'
         LK = 'C'
-        BL = 'Y'
+        BL = 'B'
         UP = 'UP'
         DOWN = 'DOWN'
         LEFT = 'LEFT'
