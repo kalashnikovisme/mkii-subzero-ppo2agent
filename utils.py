@@ -50,7 +50,7 @@ class ShangTsungDiscretizer(Discretizer):
        # [LEFT, HP], [RIGHT, HP], [LEFT, DOWN, HP], [RIGHT, DOWN, HP],
        # [LEFT, LP], [RIGHT, LP], [LEFT, UP, LP], [RIGHT, UP, LP], [LEFT, DOWN, LP], [RIGHT, DOWN, LP],
        # [DOWN, HP],
-       # [DOWN, LP], 
+       [DOWN, LP], 
        # [DOWN, LK],
        # [DOWN, BL],
        [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
