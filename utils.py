@@ -58,6 +58,7 @@ class ShangTsungDiscretizer(Discretizer):
        [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
 #        [HP, HP, LP], [LK, HP, HP, LP], # kombos
 #        [HP, HP, HP, HP] # unfair combo
+    [LEFT, LK], [RIGHT, LK]
         ])
 
 gamename = "MortalKombat3-Genesis"
