@@ -42,8 +42,8 @@ class ShangTsungDiscretizer(Discretizer):
         super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[
             [],
             [BL], # block
-        [HP], [LP],
-        [HK], [LK], [LEFT], [RIGHT], # single moves
+        # [HP], [LP],
+        # [HK], [LK], [LEFT], [RIGHT], # single moves
         # [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
        # [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
        # [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
@@ -54,13 +54,13 @@ class ShangTsungDiscretizer(Discretizer):
        # [DOWN, LK],
        # [DOWN, BL],
        [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
-       [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
-       [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP], # Triple Fire Skull
-       [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
-       [HP, HP, LP], [LK, HP, HP, LP], # kombos
+       # [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
+       # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP], # Triple Fire Skull
+       # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
+       # [HP, HP, LP], [LK, HP, HP, LP], # kombos
        [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
        [LEFT, LK], [RIGHT, LK], # podnozhka :)
-       [DOWN, HP] # uppercut
+       # [DOWN, HP] # uppercut
         ])
 
 gamename = "MortalKombat3-Genesis"
