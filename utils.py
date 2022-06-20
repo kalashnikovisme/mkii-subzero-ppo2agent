@@ -41,8 +41,8 @@ class ShangTsungDiscretizer(Discretizer):
 
         super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[
             [],
-        # [HP], [LP],
-        # [HK], [LK], [BL], [LEFT], [RIGHT], # single moves
+        [HP], [LP],
+        [HK], [LK], [BL], [LEFT], [RIGHT], # single moves
         # [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
 #        [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
 #        [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
@@ -53,11 +53,10 @@ class ShangTsungDiscretizer(Discretizer):
 #        [DOWN, LK],
 #        [DOWN, BL],
 #        [LEFT, LEFT, HP], # Fire Skull
-       [LEFT, LEFT, HP], # Fire Skull
-       # [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
-#        [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
-#        [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP], # Triple Fire Skull
-#        [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
+       [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
+       [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
+       [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP], # Triple Fire Skull
+       [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
 #        [HP, HP, LP], [LK, HP, HP, LP], # kombos
 #        [HP, HP, HP, HP] # unfair combo
         ])
