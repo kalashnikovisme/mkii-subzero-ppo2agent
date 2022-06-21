@@ -41,7 +41,7 @@ class ShangTsungDiscretizer(Discretizer):
 
         super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[
             [],
-            [BL], # block
+            # [BL], # block
         # [HP], [LP],
         # [HK], [LK], [LEFT], [RIGHT], # single moves
         # [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
@@ -58,8 +58,8 @@ class ShangTsungDiscretizer(Discretizer):
        # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP], # Triple Fire Skull
        # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
        # [HP, HP, LP], [LK, HP, HP, LP], # kombos
-       [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
-       [LEFT, LK], [RIGHT, LK], # podnozhka :)
+       # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
+       # [LEFT, LK], [RIGHT, LK], # podnozhka :)
        # [DOWN, HP] # uppercut
         ])
 
