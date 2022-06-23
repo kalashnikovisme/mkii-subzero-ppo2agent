@@ -60,7 +60,11 @@ class ShangTsungDiscretizer(Discretizer):
            # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
-            [RIGHT, RUN]
+            [RIGHT, RUN],
+            [RIGHT, RUN, RUN],
+            [RIGHT, RUN, RUN, RUN],
+            [RIGHT, RUN, RUN, RUN, RUN],
+            [RIGHT, RUN, RUN, RUN, RUN, RUN]
            ])
 
 gamename = "MortalKombat3-Genesis"
