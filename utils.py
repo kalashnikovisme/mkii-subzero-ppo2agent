@@ -2,7 +2,7 @@ import numpy as np
 import gym
 import retro
 
-N_STACK = 1
+N_STACK = 8
 
 class Discretizer(gym.ActionWrapper):
     """
