@@ -36,6 +36,7 @@ class ShangTsungDiscretizer(Discretizer):
         HK = 'Z'
         LK = 'C'
         BL = 'B'
+        RUN = 'Y'
         UP = 'UP'
         DOWN = 'DOWN'
         LEFT = 'LEFT'
@@ -53,13 +54,13 @@ class ShangTsungDiscretizer(Discretizer):
            # [DOWN, BL],
            # [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
            # [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
-           [[LEFT], [LEFT], [LEFT], [RIGHT], [RIGHT], [RIGHT], [HP]] # Triple Fire Skull
            # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP] # Triple Fire Skull
            # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
            # [HP, HP, LP], [LK, HP, HP, LP], # kombos
            # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
+            [RIGHT, RUN]
            ])
 
 gamename = "MortalKombat3-Genesis"
