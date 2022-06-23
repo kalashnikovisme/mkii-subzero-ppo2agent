@@ -2,8 +2,7 @@ import numpy as np
 import gym
 import retro
 
-N_STACK_TRAIN = 8
-N_STACK_PLAY = 1
+N_STACK = 1
 
 class Discretizer(gym.ActionWrapper):
     """
@@ -42,7 +41,7 @@ class ShangTsungDiscretizer(Discretizer):
         LEFT = 'LEFT'
         RIGHT = 'RIGHT'
 
-        super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[[], [LEFT, LEFT, LEFT, LEFT]])
+        super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[[]
            # [HP], [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
            # [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
            # [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
@@ -54,12 +53,14 @@ class ShangTsungDiscretizer(Discretizer):
            # [DOWN, BL],
            # [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
            # [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
+           [LEFT, LEFT, RIGHT, RIGHT, HP] # Triple Fire Skull
            # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP] # Triple Fire Skull
            # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
            # [HP, HP, LP], [LK, HP, HP, LP], # kombos
            # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
+           ])
 
 gamename = "MortalKombat3-Genesis"
 #state = 'kabal2.state'
