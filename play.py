@@ -9,7 +9,7 @@ from utils import *
 if __name__ == "__main__":
     num_envs = 16 # Must use the save number of envs as trained on but we create a single dummy env for testing.
     envs = SubprocVecEnv([make_env] * num_envs)    
-    envs = VecFrameStack(envs, n_stack=N_STACK)
+    envs = VecFrameStack(envs, n_stack=N_STACK_PLAY)
 
     model = PPO2.load("./mk3-ppo2.zip")
     model.set_env(envs)
@@ -18,7 +18,7 @@ if __name__ == "__main__":
 
     # Create one env for testing 
     env = DummyVecEnv([make_env])
-    env = VecFrameStack(env, n_stack=N_STACK)
+    env = VecFrameStack(env, n_stack=N_STACK_PLAY)
     obs = env.reset()
 
     # model.predict(test_obs) would through an error

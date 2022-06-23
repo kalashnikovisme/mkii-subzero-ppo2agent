@@ -13,7 +13,7 @@ if __name__ == "__main__":
     n_cpu = 16
 
     env = SubprocVecEnv([make_env] * n_cpu)
-    env = VecFrameStack(env, n_stack=N_STACK)
+    env = VecFrameStack(env, n_stack=N_STACK_TRAIN)
 
     model = PPO2(CnnLstmPolicy, env, n_steps=128, verbose=1, tensorboard_log="./tboard_log")   
     # Use this if you want to continue training a saved model
