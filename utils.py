@@ -2,6 +2,8 @@ import numpy as np
 import gym
 import retro
 
+N_STACK = 1
+
 class Discretizer(gym.ActionWrapper):
     """
     Wrap a gym environment and make it use discrete actions.
@@ -71,3 +73,4 @@ def make_env_record():
     env = retro.make(gamename, state = retro.State.DEFAULT)
     env = ShangTsungDiscretizer(env)
     return env
+
