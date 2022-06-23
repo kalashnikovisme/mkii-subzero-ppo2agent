@@ -20,7 +20,7 @@ if __name__ == "__main__":
     # model = PPO2.load("training_checkpoints/1m.zip", tensorboard_log="./tboard_log")
     # model.set_env(env)
 
-    total_timesteps = 1000000
+    total_timesteps = 2000
     save_frequency = total_timesteps / 100
 
     checkpoint_callback = CheckpointCallback(
