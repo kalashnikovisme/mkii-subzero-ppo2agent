@@ -47,21 +47,17 @@ class ShangTsungDiscretizer(Discretizer):
            # [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
            # [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
            # [LEFT, HP], [RIGHT, HP], [LEFT, DOWN, HP], [RIGHT, DOWN, HP],
-           # # [LEFT, LP], [RIGHT, LP], [LEFT, UP, LP], [RIGHT, UP, LP], [LEFT, DOWN, LP], [RIGHT, DOWN, LP],
-           # [DOWN, HP],
-           # [DOWN, LP], 
-           # [DOWN, LK],
-           # [DOWN, BL],
+           # [DOWN, HP], [DOWN, LP], [DOWN, LK], [DOWN, BL],
            # [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
            # [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
            # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP] # Triple Fire Skull
            # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
-           # [HP, HP, LP], [LK, HP, HP, LP], # kombos
-           # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
+           # [HP, HP, LP], [LK, HP, HP, LP], # combos
+           # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combos
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
-            [LEFT, RUN, RUN, RUN, RUN, RUN, RUN, RUN, RUN, RUN],
-            [RIGHT, RUN, RUN, RUN, RUN, RUN, RUN, RUN, RUN, RUN]
+           [LEFT, RUN],
+           [RIGHT, RUN]
            ])
 
 gamename = "MortalKombat3-Genesis"
