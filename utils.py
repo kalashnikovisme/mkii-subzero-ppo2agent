@@ -53,7 +53,7 @@ class ShangTsungDiscretizer(Discretizer):
            # [DOWN, BL],
            # [LEFT, LEFT, HP], [RIGHT, RIGHT, HP], # Fire Skull
            # [LEFT, LEFT, RIGHT, HP], [RIGHT, RIGHT, LEFT, HP], # Double Fire Skull
-           [LEFT, LEFT, RIGHT, RIGHT, HP] # Triple Fire Skull
+           [LEFT, LEFT, LEFT, RIGHT, RIGHT, RIGHT, HP] # Triple Fire Skull
            # [LEFT, LEFT, RIGHT, RIGHT, HP], [RIGHT, RIGHT, LEFT, LEFT, HP] # Triple Fire Skull
            # [RIGHT, LEFT, LEFT, LK], [LEFT, RIGHT, RIGHT, LK], # Volcanic Eruption
            # [HP, HP, LP], [LK, HP, HP, LP], # kombos
