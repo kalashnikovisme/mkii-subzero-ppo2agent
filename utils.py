@@ -39,9 +39,7 @@ class ShangTsungDiscretizer(Discretizer):
         LEFT = 'LEFT'
         RIGHT = 'RIGHT'
 
-       super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[
-           [],
-           [LEFT, LEFT, LEFT, LEFT ]
+       super().__init__(env=env, buttons=env.unwrapped.buttons, combos=[[], [LEFT, LEFT, LEFT, LEFT ]])
            # [HP], [LP], [HK], [LK], [BL], [UP], [DOWN], [LEFT], [RIGHT], # single moves
            # [UP, HK], [LEFT, UP, HK], [RIGHT, UP, HK], # jumps
            # [UP, HP], [LEFT, UP, HP], [RIGHT, UP, HP], # jumps
@@ -59,7 +57,6 @@ class ShangTsungDiscretizer(Discretizer):
            # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
-         ])
 
 gamename = "MortalKombat3-Genesis"
 #state = 'kabal2.state'
