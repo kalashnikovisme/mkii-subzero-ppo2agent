@@ -59,8 +59,7 @@ class ShangTsungDiscretizer(Discretizer):
            # [HP, HP, HP, HP], [LP, LP, LP, LP], # unfair combo
            # [LEFT, LK], [RIGHT, LK], # podnozhka :)
            # [DOWN, HP] # uppercut
-         ]
-       )
+         ])
 
 gamename = "MortalKombat3-Genesis"
 #state = 'kabal2.state'
