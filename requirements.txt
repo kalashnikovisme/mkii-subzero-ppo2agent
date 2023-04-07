@@ -4,3 +4,4 @@ gym-retro==0.8.0
 tensorflow==1.15
 tensorflow-gpu==1.15
 cloudpickle~=1.2.0
+protobuf==3.20
